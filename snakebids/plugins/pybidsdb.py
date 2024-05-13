@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import logging
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any
 
 import attrs
@@ -30,7 +30,7 @@ class Pybidsdb(PluginBase):
     Two arguments are added to the CLI. These can be overriden by adding arguments
     with corresponding ``dests`` before this plugin is run:
 
-    - ``plugins.pybidsdb.dir``: (:class:`~pathlib.Path`) Path of the database
+    - ``plugins.pybidsdb.dir``: (:class:`~upath.Path`) Path of the database
     - ``plugins.pybidsdb.reset``: (:class:`bool`) Boolean indicating the database should
       be reset.
 

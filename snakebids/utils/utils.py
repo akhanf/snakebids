@@ -7,7 +7,7 @@ import os
 import re
 import textwrap
 from os import PathLike
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, Callable, Iterable, Mapping, Protocol, Sequence, TypeVar, cast
 
 import attrs

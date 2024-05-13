@@ -1,5 +1,8 @@
 import collections
-from pathlib import Path, PosixPath, WindowsPath
+from upath import UPath as Path
+from upath import UPath as Path
+from upath.implementations.local import PosixUPath, WindowsUPath, FilePath
+
 from typing import Any, OrderedDict
 
 from ruamel.yaml import YAML, Dumper
@@ -19,8 +22,10 @@ def get_yaml_io():
     def to_dict(dumper: Dumper, data: OrderedDict[Any, Any]):
         return dumper.represent_dict(dict(data))
 
-    yaml.representer.add_representer(PosixPath, path2str)
-    yaml.representer.add_representer(WindowsPath, path2str)
+    yaml.representer.add_representer(Path, path2str)
+    yaml.representer.add_representer(FilePath, path2str)
+    yaml.representer.add_representer(PosixUPath, path2str)
+    yaml.representer.add_representer(WindowsUPath, path2str)
     yaml.representer.add_representer(collections.OrderedDict, to_dict)
     yaml.representer.add_representer(OrderedDict, to_dict)
     return yaml

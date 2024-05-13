@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import errno
 import json
-from pathlib import Path
+from upath import UPath as Path
 from typing import TYPE_CHECKING, Any
 
 from snakebids.io.yaml import get_yaml_io
@@ -40,4 +40,5 @@ def write_config(
             json.dump(data, f, indent=4)
             return
 
+    print(data)
     get_yaml_io().dump(data, config_file)

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import io
 from io import StringIO
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, OrderedDict
 
 import pytest

@@ -12,7 +12,7 @@ import sys
 import tempfile
 import warnings
 from collections import defaultdict
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, Iterable, Literal, NamedTuple, TypedDict, TypeVar, cast
 
 import attrs

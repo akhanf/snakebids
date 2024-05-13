@@ -4,7 +4,7 @@ import itertools as it
 import os
 import sys
 import warnings
-from pathlib import Path
+from upath import UPath as Path
 from typing import Protocol
 
 import more_itertools as itx

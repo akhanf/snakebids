@@ -6,7 +6,7 @@ import collections
 import os
 import re
 from itertools import chain
-from pathlib import Path
+from upath import UPath as Path
 from typing import Sequence
 
 from snakebids.types import ZipList

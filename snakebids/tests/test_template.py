@@ -5,7 +5,7 @@ import re
 import subprocess as sp
 import sys
 import tempfile
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, Final, Literal, TypedDict
 
 import copier

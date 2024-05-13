@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 import subprocess as sp
 import sys
-from pathlib import Path
+from upath import UPath as Path
 
 import jinja2.parser
 from jinja2 import nodes

@@ -4,7 +4,7 @@ import argparse
 import importlib.metadata as impm
 import logging
 import sys
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, Callable, Sequence, TypeVar
 
 import attrs
@@ -249,7 +249,7 @@ class SnakemakeBidsApp:
         """Perform final steps for snakemake workflows.
 
         Expects to find ``output_dir`` in config as a fully resolved
-        :class:`~pathlib.Path`
+        :class:`~upath.Path`
 
         - Modify ``output_dir`` to `output/results` if output is set to the app dir
         - Set ``self.cwd``
@@ -310,6 +310,11 @@ class SnakemakeBidsApp:
                 "app was not installed with pip. It will be recorded in output as "
                 "'unknown'."
             )
+
+        print('before writing config')
+        print(config['bids_dir'])
+
+
         # Write the config file
         write_config(
             config_file=self.configfile_outpath,

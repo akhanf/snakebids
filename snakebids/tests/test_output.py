@@ -1,7 +1,7 @@
 # ruff: noqa: PLR2004
 
 import json
-from pathlib import Path
+from upath import UPath as Path
 
 import pytest
 

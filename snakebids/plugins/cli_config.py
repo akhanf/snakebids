@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import re
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any
 
 import attrs
@@ -115,8 +115,8 @@ class CliConfig:
 
         # update the parser with config options
         for name, arg in parse_args.items():
-            import pathlib as pathlib  # noqa: PLC0414
-            from pathlib import Path as Path  # noqa: PLC0414
+            import upath as upath # noqa: PLC0414
+            from upath import UPath as Path # noqa: PLC0414
 
             # Convert type annotations from strings to class types
             # We first check that the type annotation is, in fact,

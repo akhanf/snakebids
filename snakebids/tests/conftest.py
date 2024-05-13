@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import tempfile
-from pathlib import Path
+from upath import UPath as Path
 
 import bids.layout
 import pytest

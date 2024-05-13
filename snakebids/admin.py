@@ -3,7 +3,7 @@
 import argparse
 import re
 import sys
-from pathlib import Path
+from upath import UPath as Path
 
 import copier
 import more_itertools as itx

@@ -7,7 +7,7 @@ import itertools as it
 import re
 import subprocess as sp
 from datetime import timedelta
-from pathlib import Path
+from upath import UPath as Path
 from typing import (
     Any,
     Callable,

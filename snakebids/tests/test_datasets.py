@@ -5,7 +5,7 @@ import itertools as it
 import re
 import string
 import warnings
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any
 
 import more_itertools as itx

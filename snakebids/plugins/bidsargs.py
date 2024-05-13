@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import argparse
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, Iterable, Sequence
 
 import attrs

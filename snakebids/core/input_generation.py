@@ -8,7 +8,7 @@ import os
 import re
 import warnings
 from collections import defaultdict
-from pathlib import Path
+from upath import UPath as Path
 from typing import (
     Any,
     Iterable,
@@ -579,6 +579,7 @@ def _get_component(
         raise err.get_config_error(input_name) from err
 
     for img in matching_files:
+        print(img)
         wildcards: list[str] = [
             wildcard
             for wildcard in component.get("wildcards", [])
@@ -611,6 +612,7 @@ def _get_component(
         for wildcard_name, value in parsed_wildcards.items():
             zip_lists[wildcard_name].append(value)
 
+        print(path)
         paths.add(path)
 
     # now, check to see if unique
@@ -720,12 +722,15 @@ def _parse_bids_path(path: str, entities: Iterable[str]) -> tuple[str, dict[str,
     matches : iterable of (wildcard, value)
         The values matched with each wildcard
     """
+    print(f'path before bids parsing: {path}')
     # If path is relative, we need to get a slash in front of it to ensure parsing works
     # correctly. So prepend "./" or ".\" and run function again, then strip before
     # returning
-    if not os.path.isabs(path) and get_first_dir(path) != ".":
-        path_, wildcard_values = _parse_bids_path(os.path.join(".", path), entities)
-        return str(Path(path_)), wildcard_values
+
+# AK: commenting this out for testing fsspec out    
+#    if not os.path.isabs(path) and get_first_dir(path) != ".":
+#        path_, wildcard_values = _parse_bids_path(os.path.join(".", path), entities)
+#        return str(Path(path_)), wildcard_values
 
     entities = list(entities)
 

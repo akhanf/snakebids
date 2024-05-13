@@ -4,7 +4,7 @@ import argparse
 import re
 import sys
 from argparse import ArgumentParser, Namespace
-from pathlib import Path
+from upath import UPath as Path
 
 import more_itertools as itx
 import pytest

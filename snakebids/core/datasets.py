@@ -5,7 +5,7 @@ import itertools as it
 import textwrap
 import warnings
 from math import inf
-from pathlib import Path
+from upath import UPath as Path
 from string import Formatter
 from typing import Any, Iterable, NoReturn, overload
 

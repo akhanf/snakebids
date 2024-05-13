@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import math
-from pathlib import Path
+from upath import UPath as Path
 from typing import Any, Sequence
 
 import attrs

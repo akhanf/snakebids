@@ -3,7 +3,7 @@ from __future__ import annotations
 import copy
 import itertools as it
 from os import PathLike
-from pathlib import Path
+from upath import UPath as Path
 from string import ascii_letters, digits
 from typing import (
     TYPE_CHECKING,

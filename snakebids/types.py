@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from enum import Enum
-from pathlib import Path
+from upath import UPath as Path
 from typing import Dict, Generic, Iterable, List, Mapping, Protocol, Sequence, overload
 
 from typing_extensions import Self, TypeAlias, TypedDict, TypeVar

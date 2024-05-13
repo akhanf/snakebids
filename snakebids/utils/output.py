@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
+from upath import UPath as Path
 from typing import Literal
 
 import more_itertools as itx

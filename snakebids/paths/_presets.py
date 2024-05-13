@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from pathlib import Path
+from upath import UPath as Path
 
 from snakebids.paths._config import get_bids_func
 from snakebids.paths.specs import LATEST
