@@ -2,6 +2,7 @@ import collections
 from upath import UPath as Path
 from upath import UPath as Path
 from upath.implementations.local import PosixUPath, WindowsUPath, FilePath
+from upath.implementations.cloud import GCSPath, S3Path
 
 from typing import Any, OrderedDict
 
@@ -23,6 +24,8 @@ def get_yaml_io():
         return dumper.represent_dict(dict(data))
 
     yaml.representer.add_representer(Path, path2str)
+    yaml.representer.add_representer(GCSPath, path2str)
+    yaml.representer.add_representer(S3Path, path2str)
     yaml.representer.add_representer(FilePath, path2str)
     yaml.representer.add_representer(PosixUPath, path2str)
     yaml.representer.add_representer(WindowsUPath, path2str)

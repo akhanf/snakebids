@@ -311,8 +311,6 @@ class SnakemakeBidsApp:
                 "'unknown'."
             )
 
-        print('before writing config')
-        print(config['bids_dir'])
 
 
         # Write the config file
